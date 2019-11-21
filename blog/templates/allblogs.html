@@ -16,7 +16,7 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+ 
   </head>
 
   <body>
@@ -52,23 +52,23 @@
         </div>
       </div>
     </header>
-<div class = "container">
-    <main role="main">
-   <h1 class="text-center pt-3"> 남규민 블로그</h1>
- <br>
- <br>
- <h2> 최근의 포스트</h2>
 
+ <main role="main">
+  	<div class = "container">
+   <h1 class="text-center pt-3"> 남규민 블로그</h1>
+ <br />
+ <br />
+ <h2> 최근의 포스트</h2>
 <hr/>
 
-            {% for blog in blogs.all%}
-      <a herf="">   <h3>   {{blog.title}}</h3></a>
+            {% for blog in blogs.all %}
+      <a href="">   <h3>   {{blog.title}}  </h3></a>
               {{blog.pub_date}}
                     <br/>
-                    <img src="{{blog.image.url" height="200" width="100">
+                    <img src="{{blog.image.url}}" height="200" width="100">
                   	<br/>
-                <p>  {{  blog.summary() }} </p>
-                    {%endfor%}
+                <p>  {{  blog.summary }} </p>
+                    {% endfor %}
 
    </div>
     </main>
