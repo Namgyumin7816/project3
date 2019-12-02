@@ -8,7 +8,7 @@ class Blog(models.Model):
 	body = models.TextField()
 	image = models.ImageField(upload_to = 'images/')
 	def __str__(self):   
-		return self.title 
+		return self.title # 타이틀을 리턴시켜줌 
 
 	def summary(self):
 		return self.body[:20]

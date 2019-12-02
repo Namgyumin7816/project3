@@ -65,7 +65,7 @@
       <a href="">   <h3>   {{blog.title}}  </h3></a>
               {{blog.pub_date}}
                     <br/>
-                    <img src="{{blog.image.url}}" height="200" width="100">
+                  <a href="https://comic.naver.com/webtoon/list.nhn?titleId=183559&weekday=mon"><img src="{{blog.image.url}}" height="200" width="100">
                   	<br/>
                 <p>  {{  blog.summary }} </p>
                     {% endfor %}
@@ -74,6 +74,7 @@
     </main>
 
     <footer class="text-muted">
+    	
       <div class="container">
        <p> CopyRight 남규민 {% now "Y"  %}</p>
       </div>
