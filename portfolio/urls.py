@@ -19,9 +19,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 import friends.views
 
+
+
 urlpatterns = [
 
-	path('admin/', admin.site.urls),
+
+    path('admin/', admin.site.urls),
     path('', friends.views.home, name='home'),
     path('blog/',include('blog.urls')),
 ] + static(settings.MEDIA_URL,

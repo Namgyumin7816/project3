@@ -53,23 +53,6 @@
       </div>
     </header>
 
- <main role="main">
-  	<div class = "container">
-   <h1 class="text-center pt-3"> 남규민 블로그</h1>
- <br />
- <br />
- <h2> 최근의 포스트</h2>
-<hr/>
-
-            {% for blog in blogs.all %}
-      <a href="">   <h3>   {{blog.title}}  </h3></a>
-              {{blog.pub_date}}
-                    <br/>
-                  <a href="https://comic.naver.com/webtoon/list.nhn?titleId=183559&weekday=mon"><img src="{{blog.image.url}}" height="200" width="100">
-                  	<br/>
-                <p>  {{  blog.summary }} </p>
-                    {% endfor %}
-
    </div>
     </main>
 
