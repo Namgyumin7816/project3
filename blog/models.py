@@ -12,3 +12,11 @@ class Blog(models.Model):
 
 	def summary(self):
 		return self.body[:20]
+
+class Post(models.Model):
+	title = models.CharField(max_length=200)
+	content = models.TextField()
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+	def __str__(self):   
+		return self.title # 타이틀을 리턴시켜줌 

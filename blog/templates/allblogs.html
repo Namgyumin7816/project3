@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -17,34 +18,49 @@
 
     <!-- Custom styles for this template -->
  
+     <style type="text/css"> 
+.tg  {border-collapse:collapse;border-spacing:0;}
+
+.tg td{font-family:Arial, sans-serif;font-size:16px;padding:15px 7px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+
+
+.tg .tg-c3ow{border-color:black;text-align:center;vertical-align:top;text-align:center} 
+.tg .tg-dvpl{border-color:yellow;text-align:right;vertical-align:top;text-align:center}
+.tg .tg-0pky{border-color:red;text-align:left;vertical-align:top;
+text-align:center}
+
+
+</style>
   </head>
 
   <body>
 
     <header>
+     <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+              <h4 class="text-white">연습 중 </h4>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
+              <h4 class="text-white">메뉴</h4>
               <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
+                <li> <a href="http://127.0.0.1:8000/" class="text-white">홈으로 </a></li>
+                <li> <a href="http://127.0.0.1:8000/blog/" class="text-white">추천작 </a></li>
+                 <li> <a href="http://127.0.0.1:8000/blog/" class="text-white">채팅방 </a></li>
+                            </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
+          <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>Album</strong>
+            
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,15 +69,202 @@
       </div>
     </header>
 
-   </div>
-    </main>
+    <main role="main">
 
-    <footer class="text-muted">
-    	
-      <div class="container">
-       <p> CopyRight 남규민 {% now "Y"  %}</p>
-      </div>
-    </footer>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading"><strong>에브리툰 </strong> </h1>
+   
+<table class="tg">
+  <tr>
+    <th class="tg-c3ow">판타지 추천작 </th>
+    <th class="tg-c3ow">스릴러 추천작</th>
+    <th class="tg-c3ow">액션 추천작</th>
+    <th class="tg-c3ow">일상 추천작</th>
+    <th class="tg-c3ow">개그 추천작</th>
+    <th class="tg-c3ow">로맨스 추천작</th>
+    <th class="tg-c3ow">드라마 추천작</th>
+ 
+  </tr>
+
+  <tr> <!-- 1행 -->
+
+    <td class="tg-c3ow">  <a href="https://comic.naver.com/webtoon/list.nhn?titleId=23182"><img src="{% static 'gisin.jpg' %}" height="128" width="140" /> <p> </p> 싸우자 귀신아 </td>
+    <td class="tg-c3ow"> <a href="https://comic.naver.com/webtoon/list.nhn?titleId=52993"><img src="{% static 'wal.jpg' %}" height="128" width="140"/><p></p>우월한 하루 
+    </td>
+
+     <td class="tg-c3ow"> 
+      <a href="    https://comic.naver.com/webtoon/list.nhn?titleId=150388"><img src="{% static 'fok.jpg' %}" height="128" width="140"/><p></p> 폭풍의 전학생 
+    </td>
+
+  <td class="tg-c3ow">
+      <a href="https://comic.naver.com/webtoon/list.nhn?titleId=409630"><img src="{% static 'yame.jpg' %}" height="128" width="140" /> <p> </p> 역전! 야매 요리
+    </td>
+
+     <td class="tg-c3ow"> <a href=" https://comic.naver.com/webtoon/list.nhn?titleId=15640"><img src="{% static 'jungle.jpg' %}" height="128" width="140"/><p></p> 입시명문정글고
+
+   <td class="tg-c3ow"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=703846&weekday=tue"><img src="{% static 'woman.jpg' %}" height="128" width="140"/><p></p>여신 강림
+    </td>
+  <td class="tg-c3ow"> 
+     <a href="https://comic.naver.com/webtoon/list.nhn?titleId=55150"><img src="{% static 'namgihan.jpg' %}" height="128" width="140"/><p></p>남기한 엘리트 만들기 
+  </tr>
+
+
+  <tr>
+    <td class="tg-c3ow">
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=670144"><img src="{% static 'ga.jpg' %}" height="128" width="140" /> <p> </p> 가담 항설
+    </td>
+    <td class="tg-c3ow">
+        <a href="https://comic.naver.com/webtoon/list.nhn?titleId=67235"><img src="{% static 'zigum.jpg' %}" height="128" width="140" /> <p> </p> 지금 우리학교는
+    </td>
+    <td class="tg-c3ow">
+  <a href="https://comic.naver.com/webtoon/list.nhn?titleId=389848"><img src="{% static 'helper.jpg' %}" height="128" width="140" /> <p> </p> 헬퍼
+    </td>
+    <td class="tg-c3ow">
+       <a href="https://www.lezhin.com/ko/comic/bananatoon"><img src="{% static 'banana.jpg' %}" height="128" width="140" /> 바나나 툰<p> </p>
+
+    </td>
+    <td class="tg-c3ow">
+        <a href="https://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=tue"><img src="{% static 'mam.jpg' %}" height="128" width="140" /> <p> </p> 마음의 소리
+    </td>
+    <td class="tg-c3ow">
+      <a href="https://comic.naver.com/webtoon/list.nhn?titleId=22896"><img src="{% static 'pink.jpg' %}" height="128" width="140"/><p></p>핑크 레이디
+    </td>
+    <td class="tg-c3ow">
+      <a href="   https://comic.naver.com/webtoon/list.nhn?titleId=641253&weekday=fri"><img src="{% static 'waemo.jpg' %}" height="128" width="140"/><p></p> 외모 지상주의
+    </td>
+
+
+  
+  </tr>
+
+  <tr>
+    <td class="tg-c3ow">
+      <a href="https://comic.naver.com/webtoon/list.nhn?titleId=715935"><img src="{% static 'lol.jpg' %}" height="128" width="140" /> <p> </p> 롤랑롤랑
+    </td>
+    <td class="tg-c3ow">
+        <a href="https://comic.naver.com/webtoon/list.nhn?titleId=26458o"><img src="{% static 'n.jpg' %}" height="128" width="140" /> <p> </p> n의등대-김규삼 
+    </td>
+    <td class="tg-c3ow">
+        <a href="https://comic.naver.com/webtoon/list.nhn?titleId=670139"><img src="{% static 'buhal.jpg' %}" height="128" width="140" /> <p> </p> 부활 남
+    </td>
+    <td class="tg-c3ow">
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=15938"><img src="{% static 'yatang.jpg' %}" height="128" width="140" /> <p> </p> 와탕카
+    </td>
+    <td class="tg-c3ow">
+          <a href="https://comic.naver.com/webtoon/list.nhn?titleId=729963"><img src="{% static 'gasm.jpg' %}" height="128" width="140" /> <p> </p> 가슴털 로망스
+    </td>
+    <td class="tg-c3ow">
+      
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=638994"><img src="{% static 'Ho.jpg' %}" height="128" width="140" /> <p> </p> Ho!
+    </td>  
+    <td class="tg-c3ow">
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=597447"><img src="{% static 'free.jpg' %}" height="128" width="140" /> <p> </p> 프리 드로우
+    </td>
+
+  </tr>
+
+
+  <tr>
+      <td class="tg-c3ow">
+        <a href="https://page.kakao.com/home/%EC%9D%B4%EC%B0%A8%EC%9B%90-%EC%9A%A9%EB%B3%91-%5B%EB%8F%85%EC%A0%90%EC%97%B0%EC%9E%AC%5D/50465822"><img src="{% static '2ca.jpg' %}" height="128" width="140" /> <p> </p> 이차원 용병
+      </td>
+    <td class="tg-c3ow">
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=15568"><img src="{% static '9dab.jpg' %}" height="128" width="140" /> <p> </p> 수사9단
+    </td>
+    <td class="tg-c3ow">
+        <a href="https://comic.naver.com/webtoon/list.nhn?titleId=720127"><img src="{% static 'sen.jpg' %}" height="128" width="140" /> <p> </p> 쏀놈
+
+    <td class="tg-c3ow">
+        <a href="    https://www.lezhin.com/ko/comic/revatoon"><img src="{% static 'reva.jpg' %}" height="128" width="140"/><p></p>레바 툰 
+    </td>
+    <td class="tg-c3ow">
+           <a href="https://comic.naver.com/webtoon/list.nhn?titleId=728015&weekday=wed"><img src="{% static 'mojo.jpg' %}" height="128" width="140" /> <p> </p> 모죠의 일지
+    
+    </td>  
+    <td class="tg-c3ow">
+       <a href=" https://comic.naver.com/webtoon/list.nhn?titleId=677536"><img src="{% static 'ID.jpg' %}" height="128" width="140"/><p></p>내아이디는 강남미인 
+    </td>
+    <td class="tg-c3ow">
+        <a href="    https://comic.naver.com/webtoon/list.nhn?titleId=626907&weekday=wed"><img src="{% static 'bok.jpg' %}" height="128" width="140"/><p></p> 복학왕
+
+    </td>  
+  </tr>
+
+
+  <tr>
+    <td class="tg-c3ow">
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=642653"><img src="{% static 'side.jpg' %}" height="128" width="140" /> <p> </p> 사이드킥
+    </td>
+    <td class="tg-c3ow">   <a href="https://comic.naver.com/webtoon/list.nhn?titleId=698918&weekday=tue"><img src="{% static 'one.jpg' %}" height="128" width="140" /> <p> </p> 원주민 공포만화
+    </td>
+    <td class="tg-c3ow">
+        <a href="https://comic.naver.com/webtoon/list.nhn?titleId=733766"><img src="{% static 'jonmang.jpg' %}" height="128" width="140" /> <p> </p> 인생존망
+    </td>
+    <td class="tg-c3ow">
+         <a href="https://comic.naver.com/webtoon/list.nhn?titleId=15441"><img src="{% static 'golbang.jpg' %}" height="128" width="140" /> <p> </p> 골방환상곡
+    </td>
+    <td class="tg-c3ow">
+         <a href="https://comic.naver.com/webtoon/list.nhn?titleId=651665"><img src="{% static 'yaburi.jpg' %}" height="128" width="140"/><p></p>야부리맨
+    </td>
+    <td class="tg-c3ow">
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=733074&weekday=mon"><img src="{% static '3gi.jpg' %}" height="128" width="140"/><p></p>백수세끼 
+    </td>
+    <td class="tg-c3ow">
+     <a href="https://comic.naver.com/webtoon/list.nhn?titleId=578105"><img src="{% static 'nega.jpg' %}" height="128" width="140"/><p></p>네가 없는 세상
+    </td>  
+
+
+  </tr>
+
+  <tr>
+     <td class="tg-c3ow">
+        <a href="https://page.kakao.com/home/%EB%AC%B5%ED%96%A5-%EB%8B%A4%ED%81%AC%EB%A0%88%EC%9D%B4%EB%94%94-%5B%EB%8F%85%EC%A0%90%EC%97%B0%EC%9E%AC%5D/53216022"><img src="{% static 'lady.jpg' %}" height="128" width="140" /> <p> </p> 묵향 다크레이디
+     </td>
+    <td class="tg-c3ow">
+         <a href="https://comic.naver.com/webtoon/list.nhn?titleId=26115"><img src="{% static 'gohang.jpg' %}" height="128" width="140" /> <p> </p> 고향의 꽃
+    </td>
+    <td class="tg-c3ow">
+        <a href="http://webtoon.daum.net/webtoon/view/Matchless"><img src="{% static 'black.jpg' %}" height="128" width="140" /> <p> </p> 블랙 베히모스 
+    </td>
+    <td class="tg-c3ow">
+         <a href="https://comic.naver.com/webtoon/list.nhn?titleId=256855"><img src="{% static 'zilpung.jpg' %}" height="128" width="140" /> <p> </p> 들어는 보았나 질풍기획
+    </td>
+    <td class="tg-c3ow">
+         <a href="https://comic.naver.com/webtoon/list.nhn?titleId=521533"><img src="{% static 'sm.jpg' %}" height="128" width="140"/><p></p>sm 플레이어
+    </td>
+    <td class="tg-c3ow"> <a href="https://comic.naver.com/webtoon/list.nhn?titleId=731130&weekday=thu"><img src="{% static 'duna.jpg' %}" height="128" width="140" /> <p> </p> 이두나! </td>  
+
+    <td class="tg-c3ow"> <a href="  https://comic.naver.com/webtoon/list.nhn?titleId=22897&weekday=sun"><img src="{% static 'horang2.jpg' %}" height="128" width="140"/><p></p>호랭총각 </td>
+
+  </tr>
+  <tr>
+     <td class="tg-c3ow">
+       <a href="https://page.kakao.com/home/%EC%96%B8%EB%8D%B0%EB%93%9C%ED%82%B9-%5B%EB%A7%A4%EC%A3%BC-%EC%9D%BC%EC%9A%94%EC%9D%BC-%EC%97%B0%EC%9E%AC%5D/46599532"><img src="{% static 'undead.jpg' %}" height="128" width="140" /> <p> </p> 언데드 킹 
+     </td>
+    <td class="tg-c3ow">
+    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=708378"><img src="{% static 'giok.jpg' %}" height="128" width="140" /> <p> </p> 타인은 지옥이다
+    </td>
+    <td class="tg-c3ow">
+           <a href="    http://webtoon.daum.net/webtoon/view/maae"><img src="{% static 'maae.jpg' %}" height="128" width="140"/><p></p>마애
+    </td>
+    <td class="tg-c3ow">
+        <a href="https://comic.naver.com/webtoon/list.nhn?titleId=686312"><img src="{% static 'ho9.jpg' %}" height="128" width="140" /> <p> </p> 열정호구
+    </td>
+    <td class="tg-c3ow">
+ <a href="  https://comic.naver.com/webtoon/list.nhn?titleId=690503&weekday=sun"><img src="{% static 'domang.jpg' %}" height="128" width="140"/><p></p>도망자
+    </td>
+    <td class="tg-c3ow">
+      <a href="  http://webtoon.daum.net/webtoon/view/magesdaughter"><img src="{% static 'mabap.jpg' %}" height="128" width="140"/><p></p>대 마법사의 딸 
+    </td>  
+    <td class="tg-c3ow">
+       <a href="https://comic.naver.com/webtoon/list.nhn?titleId=551651"><img src="{% static 'ak.jpg' %}" height="128" width="140"/><p></p>악플 게임
+    </td>
+
+  </tr>
+
+</table>
+        
 
    
 
